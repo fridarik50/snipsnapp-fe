@@ -1,0 +1,33 @@
+.weekly-calendar{
+    margin: 5px;
+    padding: 5px;
+    
+}
+.weekly-calendar  .calendar{
+    display: flex;
+}
+.weekly-calendar .day{
+    width: 8rem;
+    height: 2rem;
+    background-color: #112233;
+    color: #fefefe;
+    margin: 5px;
+    padding: 2px;
+}
+.weekly-calendar .time{
+    margin: 5px;
+    padding: 2px;
+    color: #CCC;
+}
+
+.weekly-calendar > div >.backBtn{
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 2rem;  
+    
+}
+
+.weekly-calendar > div > .forwardBtn{
+    color: white; 
+    font-size: 1.5rem;
+}

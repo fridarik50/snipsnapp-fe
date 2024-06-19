@@ -1,0 +1,66 @@
+.registerForm {
+    @apply 
+    flex flex-col
+    h-full
+    w-full
+    items-center
+    justify-center
+    mt-20
+    gap-10
+    md:flex
+    md:justify-center
+    mb-6
+}
+
+.inputContainer {
+    margin: 5% auto;
+    @apply flex
+    w-1/2
+    gap-7
+    items-center
+    justify-center
+}
+
+.registerInputDetails {
+    @apply mb-3
+    w-3/4
+}
+
+.userInputDetails {
+    @apply 
+    flex flex-col
+    w-3/4
+    mb-3
+    align-top
+    justify-start
+    
+}
+
+.roleInputDetails {
+    height: 20vh;
+    width: 30vw;
+    @apply flex flex-col
+    align-top
+    items-center
+    justify-start
+    
+}
+
+.roleInputSelect > span{
+    @apply text-white
+    mr-2
+}
+
+.submitBtnHidden {
+    @apply hidden ;
+}
+.submitBtn{
+    @apply bg-[#89D5BC]
+    hover:bg-[#62a790]
+    text-white
+    font-bold
+    py-2 
+    px-4 
+    rounded-[18px]
+    focus:outline-none;
+}

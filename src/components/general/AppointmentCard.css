@@ -1,0 +1,9 @@
+.AppointmentCard{
+    height: 15vh;
+    width: 20vw;
+    margin: 1rem;
+    padding: 4rem;
+    padding-top: 1rem;
+    background-color: #E7EBBC;
+    border-radius: 4px;
+}

@@ -1,0 +1,38 @@
+.updateBarberForm{
+    @apply 
+    flex flex-col
+    h-full
+    w-full
+    items-center
+    justify-center
+    mt-20
+    gap-10
+    md:flex
+    md:justify-center
+    mb-6
+}
+
+.inputContainer {
+    margin: 2% auto;
+    @apply flex flex-col
+    w-1/2
+    gap-3
+    items-center
+    justify-center
+}
+
+.barberInputDetails {
+    @apply 
+    w-2/3
+}
+
+.submitBtn{
+    @apply bg-[#89D5BC]
+    hover:bg-[#62a790]
+    text-white
+    font-bold
+    py-2 
+    px-4 
+    rounded-[18px]
+    focus:outline-none;
+}

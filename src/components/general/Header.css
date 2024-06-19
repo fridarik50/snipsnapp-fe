@@ -1,0 +1,29 @@
+.header-text {
+       padding: 0.5rem;
+       border-radius: 5px;
+}
+
+.header-container{
+    display: inline-block;
+}
+
+.header-container-error{
+    color: red;
+    position: fixed;
+    height: 75vh;
+    width: 75vw;
+    top: 20vh;
+    left: 20vw;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.header-container-error .header-text{
+    height: 100%;
+    text-align: center;
+}
+
+.header-logo{
+    height: 2rem;
+    width: auto;
+}

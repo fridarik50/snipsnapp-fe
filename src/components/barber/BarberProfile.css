@@ -1,0 +1,32 @@
+.barber-profile{
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+.barber-profile .section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20vw;
+    color: white;
+}
+
+.barber-profile .btnSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 15vw;
+    color: white;
+}
+
+.go-to-schedule{
+    color: white;
+    background-color: #89D5BC;
+    padding: 4px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.my-barber-list{
+    height: 40vh;
+    width: 30vw;
+    overflow-y: scroll;
+}
+
+.customer-page .sections{
+    display: flex;
+}
+
+.customer-page .sections > div{
+    margin: 1rem;
+}

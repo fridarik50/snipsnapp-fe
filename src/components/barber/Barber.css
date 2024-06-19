@@ -1,0 +1,5 @@
+.daily-customers{
+    height: 20vh;
+    width: 20vw;
+    overflow-y: scroll;
+}

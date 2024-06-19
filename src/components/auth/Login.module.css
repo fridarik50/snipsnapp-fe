@@ -1,0 +1,91 @@
+.loginContainer{
+    @apply
+    flex
+    items-center
+    justify-center
+    min-h-screen;
+}
+
+.loginForm{
+    @apply
+    flex flex-col
+    w-full
+    max-w-md 
+    bg-white
+    rounded
+    px-8
+    pt-6
+    pb-8
+    mb-28;
+}
+
+.headerContainer{
+    @apply flex
+    justify-center;
+}
+
+.inputContainer{
+    margin: 5% auto;
+}
+
+.emailInput{
+    @apply mb-4
+    appearance-none
+    border rounded
+    w-full
+    py-2 
+    px-3
+    text-gray-700
+    leading-tight
+    focus:outline-none;
+}
+
+.passwordInput{
+    @apply appearance-none
+    border rounded
+    w-full
+    py-2
+    px-3
+    text-gray-700
+    leading-tight
+    focus:outline-none;
+}
+
+.buttonContainer{
+    @apply flex
+    items-center
+    justify-around;
+}
+
+.loginBtn{
+    @apply bg-[#89D5BC]
+    hover:bg-[#62a790]
+    text-white
+    font-bold
+    py-2
+    px-20
+    rounded-[4px]
+    focus:outline-none;
+}
+
+.registerContainer{
+    @apply flex 
+    justify-evenly
+    mt-3;
+}
+
+.linkToRegister{
+    @apply font-bold
+    text-blue-500
+    hover:text-blue-800;
+}
+
+
+/* .forgotPasswordBtn{
+    @apply inline-block
+    align-baseline
+    font-bold
+    text-sm
+    text-blue-500
+    hover:text-blue-800;
+} */
