@@ -3,6 +3,7 @@ import Barber from '../models/Barber';
 import Customer from '../models/Customer';
 import { searchBarber } from '../api/barberApi';
 import { searchCustomers } from '../api/customerApi';
+import AuthResponse from '../models/AuthResponse';
 
 type ContextT = {
     searchText:string,
@@ -13,6 +14,8 @@ type ContextT = {
     setSearchText: (text:string) => void,
     logout:() => void ,
     handleSearch:(text:string) => void,
+    isCustomer: () => boolean,
+    isBarber: () => boolean
 }
 const Context = React.createContext<ContextT>({
     searchText:'',
@@ -23,6 +26,8 @@ const Context = React.createContext<ContextT>({
     setSearchText: (text:string):void =>undefined,
     logout:() :void => undefined,
     handleSearch:(text:string) :void => undefined,
+    isCustomer: () => false,
+    isBarber: () => false
 })
 
 export const ContextProvider = ({children}:{children: ReactNode}) => {
@@ -40,6 +45,17 @@ export const ContextProvider = ({children}:{children: ReactNode}) => {
       
     };
 
+    const getRole = () => {
+        const raw = localStorage.getItem("auth");
+        if(raw){
+            const auth = JSON.parse(raw)  as AuthResponse;
+            return auth.entity.role!
+        }
+        return ''
+    }
+    const isCustomer = () => getRole() === "CUSTOMER";
+    const isBarber = () => getRole() === "BARBER";
+
     const handleSearch = async (text:string) => {
         const barbers = await searchBarber(text);
         if (barbers) {
@@ -53,7 +69,7 @@ export const ContextProvider = ({children}:{children: ReactNode}) => {
       };
 
     return (
-        <Context.Provider value={{setSearchText, searchText, logout,isMenuVisible, toggleMenuVisibility, handleSearch, barbers, customers}}>
+        <Context.Provider value={{setSearchText, searchText, logout,isMenuVisible, toggleMenuVisibility, handleSearch, barbers, customers, isCustomer, isBarber}}>
             {children}
         </Context.Provider>
     )

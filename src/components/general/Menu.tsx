@@ -25,12 +25,24 @@ const Menu: React.FC<MenuProps> = ({isVisible}) => {
     <div className={`menu ${isVisible ? 'visible' : ''}`}>
       <Header logo="src/assets/SnipSnapp Logo.svg" backgroundColor="none" />
       <Link to='/login' onClick={handleClick}>Login</Link>
-      <Link to='/barber' onClick={handleClick}>Barber Page</Link>
-      <Link to='/customer' onClick={handleClick}>Customer Page</Link>
-      <Link to='/barber-list' onClick={handleClick}>Barber List</Link>
-      <Link to='/update-barber' onClick={handleClick}>Update Barber Info</Link>
-      <Link to='/customer-list' onClick={handleClick}>Customer List</Link>
-      <Link to='/update-customer' onClick={handleClick}>Update Customer Info</Link>
+      
+      {context.isCustomer() && (
+        <>
+        <Link to='/customer' onClick={handleClick}>Customer Page</Link>
+        <Link to='/barber-list' onClick={handleClick}>Barber List</Link>
+        <Link to='/update-customer' onClick={handleClick}>Update Customer Info</Link>
+        </>
+      )}
+      {
+        context.isBarber() && (
+          <>
+          <Link to='/barber' onClick={handleClick}>Barber Page</Link>
+          <Link to='/update-barber' onClick={handleClick}>Update Barber Info</Link>
+          <Link to='/customer-list' onClick={handleClick}>Customer List</Link>
+          </>
+        )
+      }
+      
       <Link to='/login' onClick={handleLogoutClick}>Logout</Link>
     </div>
   )

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import Context from "../context/AppContext";
 import Barber from "../models/Barber";
 import Card from "./general/Card";
 import Header from "./general/Header";
@@ -8,32 +9,11 @@ import { getCustomersAppointments } from "../api/customerApi";
 import Appointment from "../models/Appointment";
 import AppointmentCard from "./general/AppointmentCard";
 
-// const barbers: Barber[] = [
-//   {
-//     id: 1,
-//     name: "Arik",
-//     email: "arik1@gmail.com",
-//   },
-//   {
-//     id: 2,
-//     name: "Arik bbb",
-//     email: "arik1@gmail.com",
-//   },
-//   {
-//     id: 3,
-//     name: "Arik ccc",
-//     email: "arik1@gmail.com",
-//   },
-//   {
-//     id: 4,
-//     name: "Arik ddd",
-//     email: "arik1@gmail.com",
-//   },
-// ];
 
 const CustomerPage = () => {
   const [barbers, setBarbers] = useState<Barber[]>([]);
   const [appointments, setAppointments] = useState<Appointment[]>([]);
+  const ctx = useContext(Context);
 
   const getAssociatedBarbers = async () => {
     const strUser = localStorage.getItem("user");
@@ -56,6 +36,9 @@ const CustomerPage = () => {
   };
 
   useEffect(() => {
+    if(!ctx.isCustomer()){
+      
+    }
     getAssociatedBarbers();
   }, []);
 
